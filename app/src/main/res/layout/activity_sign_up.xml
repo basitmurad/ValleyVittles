@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_color1"
+    android:orientation="vertical"
+    tools:context=".ui.SignUpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/signupback"
+
+    android:orientation="vertical"
+
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/signupback"
+                app:tabBackground="@drawable/tab_item_custom"
+                app:tabIndicatorColor="#FF6442"
+                app:tabIndicatorHeight="5dp"
+                app:tabIndicatorFullWidth="true"
+                app:tabGravity="fill"
+                style="@style/Theme.textsize"
+                app:tabSelectedTextColor="@color/tab_selected_color"
+                app:tabTextColor="@color/tab_unselected_color" >
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Log In"
+
+                    style="@style/Theme.textsize"
+                    />
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Up"
+
+                    style="@style/Theme.textsize"
+                    />
+            </com.google.android.material.tabs.TabLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+    </LinearLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout" />
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/linearLayout"-->
+    <!--        android:layout_width="match_parent"-->
+
+    <!--        android:layout_height="200dp"-->
+    <!--        android:background="@drawable/signupback"-->
+
+    <!--        android:orientation="horizontal"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--        <com.google.android.material.tabs.TabLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:id="@+id/tablayout"-->
+    <!--            android:layout_gravity="bottom"-->
+    <!--            android:background="@drawable/signupback"-->
+    <!--            app:tabBackground="@drawable/tab_item_custom"-->
+    <!--            app:tabSelectedTextColor="@color/tab_selected_color"-->
+    <!--            app:tabTextColor="@color/tab_unselected_color">-->
+
+    <!--            <com.google.android.material.tabs.TabItem-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="Sign Up" />-->
+
+    <!--            <com.google.android.material.tabs.TabItem-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="Log In" />-->
+    <!--        </com.google.android.material.tabs.TabLayout>-->
+
+
+    <!--    </LinearLayout>-->
+
+    <!--   <androidx.viewpager2.widget.ViewPager2-->
+    <!--        android:id="@+id/viewPager"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />-->
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <shape>
+            <!-- Define the background color for the selected tab -->
+            <solid android:color="@color/back_color" />
+            <!-- Define the corners for the selected tab -->
+            <corners android:radius="12dp" />
+
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <!-- Define the background color for the unselected tab -->
+            <solid android:color="@color/back_color" />
+            <!-- Define the corners for the unselected tab -->
+            <corners android:radius="12dp" />
+
+        </shape>
+    </item>
+</selector>

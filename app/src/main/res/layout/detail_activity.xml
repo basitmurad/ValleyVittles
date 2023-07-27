@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.ProfileActivity"
+    android:orientation="vertical"
+    android:paddingTop="22dp"
+    android:background="@color/back_color1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textviewCode"
+            android:text="+92"
+            android:textSize="18sp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white"
+            android:paddingStart="8dp"
+
+            />
+
+        <EditText
+            android:id="@+id/edittextNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Enter number"
+            android:inputType="number"
+            android:padding="16dp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edittextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        android:padding="16dp"
+
+        />
+    <EditText
+        android:id="@+id/edittextAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:hint="Enter your current address"
+
+        android:padding="16dp"
+
+        />
+
+
+
+
+
+
+
+</LinearLayout>
