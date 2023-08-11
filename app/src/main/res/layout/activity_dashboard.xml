@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/back_color1"
-    >
+    android:background="@color/back_color1">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-android:orientation="vertical"
+        android:orientation="vertical"
         tools:context=".ui.DashboardActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,8 +21,8 @@ android:orientation="vertical"
 
             <ImageView
                 android:id="@+id/lo"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
 
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="5dp"
@@ -36,7 +35,7 @@ android:orientation="vertical"
 
             <ImageView
 
-
+android:visibility="invisible"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="left"
@@ -52,8 +51,8 @@ android:orientation="vertical"
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image"
-                android:layout_width="55dp"
-                android:layout_height="57dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
 
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="16dp"
@@ -68,52 +67,51 @@ android:orientation="vertical"
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
+            style="@style/Theme.textsize"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
             android:layout_gravity="bottom"
+            android:layout_margin="8dp"
             android:background="@drawable/signupback"
             app:tabBackground="@drawable/tab_item_custom"
+            app:tabGravity="center"
+
             app:tabIndicatorColor="#FF6442"
-            app:tabIndicatorHeight="5dp"
             app:tabIndicatorFullWidth="true"
-            app:tabGravity="fill"
-            style="@style/Theme.textsize"
+            app:tabIndicatorHeight="5dp"
             app:tabSelectedTextColor="@color/tab_selected_color"
-            app:tabTextColor="@color/tab_unselected_color" >
+            app:tabTextColor="@color/tab_unselected_color">
+
             <com.google.android.material.tabs.TabItem
+                style="@style/Theme.textsize"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Dry Fruits"
+android:layout_marginEnd="40dp"
+                android:text="Dry Fruits" />
 
-                style="@style/Theme.textsize"
-                />
             <com.google.android.material.tabs.TabItem
+                style="@style/Theme.textsize"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Natural Minerals"
-
-                style="@style/Theme.textsize"
-                />
+android:layout_marginStart="40dp"
+                android:text="Natural Minerals" />
         </com.google.android.material.tabs.TabLayout>
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="450dp"
             android:paddingTop="6dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tabLayout" />
 
 
+        <!--        <androidx.appcompat.widget.SearchView-->
+        <!--            android:id="@+id/searchView"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="40dp"-->
+        <!--            android:background="@drawable/searchview_custum"-->
 
-
-<!--        <androidx.appcompat.widget.SearchView-->
-<!--            android:id="@+id/searchView"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="40dp"-->
-<!--            android:background="@drawable/searchview_custum"-->
-
-<!--            style="@style/margin16" />-->
+        <!--            style="@style/margin16" />-->
     </LinearLayout>
 </ScrollView>

@@ -1,14 +1,23 @@
 package com.example.valleyvittles.fragements;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.valleyvittles.R;
+import com.example.valleyvittles.adapter.DashboardAdapter;
+import com.example.valleyvittles.adapter.ItemAdapter;
+import com.example.valleyvittles.models.ItemDetail;
+import com.example.valleyvittles.models.ItemdashboardDetail;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -57,10 +66,51 @@ public class DryFruitsFragment extends Fragment {
         }
     }
 
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dry_fruits, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_dry_fruits, container, false);
+
+        RecyclerView recyclerView = view.findViewById(R.id.dryfruitrecy);
+
+        // Initialize the list and add items to it
+        ArrayList<ItemDetail> list = new ArrayList<>();
+        list = new ArrayList<>();
+
+        list.add(new ItemDetail("Almond" ,"500" , R.drawable.almond));
+        list.add(new ItemDetail("Apricots" ,"500" , R.drawable.appricots));
+        list.add(new ItemDetail("Mulberries white" ,"500" , R.drawable.mulbarries2));
+        list.add(new ItemDetail("Mulberries black" ,"500" , R.drawable.mulbariies1));
+        list.add(new ItemDetail("Walnuts" ,"500" , R.drawable.walnuts));
+//        list.add(new ItemdashboardDetail("Almonds", "(badham)"));
+//        list.add(new ItemdashboardDetail(" Dried Apricots", "(Phator)"));
+//        list.add(new ItemdashboardDetail("Walnuts", "(khakai)"));
+//        list.add(new ItemdashboardDetail("Dried Mulberries", "(maroch)"));
+//        list.add(new ItemdashboardDetail("Dried Mulberries", "(maroch)"));
+//        list.add(new ItemdashboardDetail("Dried Mulberries", "(maroch)"));
+//        list.add(new ItemdashboardDetail("Dried Mulberries", "(maroch)"));
+//        list.add(new ItemdashboardDetail("Dried Mulberries", "(maroch)"));
+//        list.add(new ItemdashboardDetail("Dried Mulberries", "(maroch)"));
+//        list.add(new ItemdashboardDetail("Dried Mulberries", "(maroch)"));
+//        list.add(new ItemdashboardDetail("Dried Mulberries", "(maroch)"));
+//        list.add(new ItemdashboardDetail("Dried Mulberries", "(maroch)"));
+//        list.add(new ItemdashboardDetail("Dried Mulberries", "(maroch)"));
+
+
+        // Pass the list to the DashboardAdapter constructor
+//        DashboardAdapter dashboardAdapter = new DashboardAdapter(getContext(), list);
+//
+//        recyclerView.setAdapter(dashboardAdapter);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        ItemAdapter itemAdapter = new ItemAdapter(getContext(),list);
+        recyclerView.setAdapter(itemAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+
+        return view;
     }
 }
